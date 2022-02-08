@@ -1,0 +1,103 @@
+/**
+ * Version: 1.0
+ * Author: developermithu
+ * Website: mithu.epizy.com
+ * Project Name: js-cursor-animation
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: monospace;
+  cursor: none;
+}
+
+header {
+  /* background: rgb(113, 4, 223); */
+  /* border-bottom: 2px solid #eee; */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+nav .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 50px;
+}
+
+nav li a {
+  /* color: white; */
+  font-size: 1rem;
+  padding: 10px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+main img {
+  width: 100%;
+}
+
+/*  Cursor Style */
+.cursor {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 2px solid black;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%; /* increase scale around all side */
+  backdrop-filter: grayscale(); /*worked only img */
+  z-index: -1;
+}
+
+.link-grow {
+  transform: scale(2);
+  background: black;
+}
+
+.hovered-link {
+  color: white;
+  transition: 0.3s ease;
+}
+
+img {
+  position: relative;
+  z-index: -2;
+  border-radius: 5px;
+}
+
+/* .img-hover {
+  transform: scale(1.25);
+} */
